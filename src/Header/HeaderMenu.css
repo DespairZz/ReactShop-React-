@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Neumann";
+  src: url("../Fonts/Neumann/Neumann.eot");
+  src: url("../Fonts/Neumann/Neumann.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/Neumann/Neumann.woff") format("woff"),
+  url("../Fonts/Neumann/Neumann.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.headerBody {
+    z-index: 1000000;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+    border-radius: .7rem;
+    position: fixed;
+    text-decoration: none;
+}
+
+.button__delimiter {
+    width:1px;
+    height:22px;
+    background-color:rgb(74,36,49,.9);
+    margin-left:5px;margin-right:5px;
+   
+  }
+
+  .button__delimiter:hover {
+    background-color:wheat;
+  }
+
+  .cart--logo {
+    padding-right: 22px;
+    background: url("./cart.png")  right center no-repeat;
+    
+  }
+
+.button--menu {
+    background: #101010;
+    border-top: 1px solid #8ea4cd;
+    color: wheat;
+    background: url("./menu.png")  left center no-repeat;
+    border: none;
+    padding-left: 30px;
+    overflow: hidden;
+    margin-left: 15px;
+    font-family: "Neumann", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 1px 1px rgba(255,255,255,.35); 
+    height: 45px;
+  }
+
+  .button--menu:hover {
+    background-color: #222222;
+    cursor: pointer;
+  }
+
+  .button--cart {
+    background-color: #222222;
+    border-top: 1px solid #fbbad3;
+    color: wheat;
+    border-radius: 15px;
+    border: none;
+    margin-top: 10px;
+    margin-right: 15px;
+    height: 22px;
+    font-family: "Neumann", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.9;
+    text-shadow: 0 1px 1px rgba(255,255,255,.35); 
+    display: flex;
+    
+    text-align: center;
+}
+
+  .button--cart:hover {
+    opacity: 1;
+    color: wheat;
+    cursor: pointer;
+    background-color: darkred;
+  }
+
+  .button--add {
+    background-color: #222222;
+    border-top: 1px solid #fbbad3;
+    color: wheat;
+    width: 220px;
+    display: inline;
+    border-radius: 7px;
+    border: none;
+    margin: 7px;
+    padding: 7px;
+    font-family: "Neumann", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.9;
+    text-shadow: 0 1px 1px rgba(255,255,255,.35); 
+  }
+
+  .button--add:hover {
+    opacity: 1;
+    color: wheat;
+    cursor: pointer;
+    background-color: darkred;
+  }
+
+  .button--sorting {
+    background-color: #383838;
+    border-top: 1px solid #fbbad3;
+    color: wheat;
+    border-radius: 5px;
+    border: none;
+    margin: 7px;
+    height: 25px;
+    margin-top: 16px;
+    font-family: "Neumann", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-shadow: 0 1px 1px rgba(255,255,255,.35); 
+}
+
+.button--sorting:hover {
+  background-color: darkred;
+}
+  .sort--butt {
+    background: url("./sorting.png")  right center no-repeat;
+    padding-right: 22px;
+    color: wheat;
+  }
+ 
+  .categories {
+    margin-left: -33px;
+ }
+ 
+   .categories ul {
+     display:-webkit-box;
+     display:-ms-flexbox;
+     display: flex;
+     list-style: none;
+ }
+ 
+ .categories ul li {
+    background-color:#f9f9f9;
+    height: 20px;
+    padding-top: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px;
+    margin-right:5px;
+    font-weight:bold;
+    cursor:pointer;
+    -webkit-transition:background-color 0.1s ease-in-out;
+   transition:background-color 0.1s ease-in-out;
+   -webkit-touch-callout:none;
+    -webkit-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select:none;
+   font-family: 'Montserrat', sans-serif;
+
+}
+ .categories ul li:hover {
+     background-color: darkred;
+ }
+ 
+ .categories ul li:active {
+     background-color:#ececec
+ }
+ .categories ul li.active { 
+     background-color:#282828;
+     color:#fff
+ }
+
+ .onecart {
+   text-decoration: none;
+   
+ }
