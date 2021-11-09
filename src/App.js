@@ -5,54 +5,30 @@ import Cart from './Cart';
 import ShopBody from './ShopBody/ShopBody';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
-import { setPhones } from './redux/actions/phones'
-import { connect } from 'react-redux'
-//import store from './redux/Store';
+import { setPhones } from './redux/actions/phones';
+import { useDispatch } from 'react-redux';
 
-  // function App() {
-  //   const [phones, setPhones] = React.useState([]);
+function App() {
 
-  //   React.useEffect (() => {
-    
-    
-  //   }, []);
+  const dispatch = useDispatch();
 
-    
 
-  //   return ;
-  // }
+  React.useEffect(() => {
+      axios.get('http://localhost:3001/phones').then(({data}) => {
+          dispatch(setPhones(data));
+            });
+    }, []);
 
-class App extends React.Component {
-
-  componentDidMount() {
-    axios.get('http://localhost:3000/db.json').then(({data}) => {
-     this.props.dispatch(setPhones(data.phones));
-    });
-  }
-
-  render () {
-    return (
+  return(
       <div className="App">
-        <HeaderMenu />
-        <div className="shopBody">
-        <Route exact path="/" render={() => <ShopBody items={this.props.items}/>} />
-        <Route exact path="/cart" component={Cart} />
-        </div>
+      <HeaderMenu />
+      <div className="shopBody">
+      <Route exact path="/" component={ShopBody}  />
+      <Route exact path="/cart" component={Cart} />
       </div>
+    </div>
     )
-  }
+
 }
 
-const mapStateToProps = (state) => {
-  return {
-    items: state.phones.items
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setPhones: (items) => dispatch(setPhones(items))
-  };
-}
-
-export default connect(mapStateToProps)(App);
+export default App;
